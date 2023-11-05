@@ -1,0 +1,40 @@
+.line {
+  background-color: white;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 4px;
+}
+
+nav {
+  background-color: #29293d;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  color: white;
+  padding: 15px;
+}
+
+ul li:first-of-type {
+  background-color: green;
+}
+
+ul li:last-of-type {
+  display: none;
+}
+
+@media screen and (max-width: 350px) {
+  ul li:not(:first-of-type) {
+    display: none;
+  }
+  ul li:last-of-type {
+    display: block;
+  }
+  ul {
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=styles.css.map */

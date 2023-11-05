@@ -1,0 +1,159 @@
+@import 'base';
+@import 'colors';
+@import 'spacings';
+@import 'typography';
+@import 'mixins';
+
+
+.hero {
+    
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding-top: $lgSpacing;
+    position: relative;
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        color: $white;
+        border: 2px solid $white;
+        margin: 0;
+        padding: $mdSpacing;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: calc(100% - 2 * $container-spacing);
+        @media screen and (max-width: 400px){
+            font-size: 3rem;
+        }
+    }
+
+   
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav{
+        display: none;
+    }
+}
+
+.interactive{
+    margin-top: $xlSpacing;
+
+    img{
+        margin: 0 auto;
+    }
+
+    h2 {
+        margin-top: $lgSpacing;
+        margin-bottom: $mdSpacing;
+    }
+    .text{
+        padding: 0 $mdSpacing;
+        text-align: center;
+    }
+
+    p{
+        color: $darkGray;
+        margin: 0;
+    }
+}
+
+.our-creations{
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    button{
+        border: 1px solid $black;
+        background-color: $white;
+        padding: $baseSpacing $lgSpacing;
+        cursor: pointer;
+        width: 50%;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .creations {
+        width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // gap: $mdSpacing;
+
+        article{
+            // padding: $mdSpacing;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-bottom: $mdSpacing;
+            height: 150px;
+            background-position: top center;
+            background-size: cover;
+
+            h3{
+                margin:0;
+                padding-left: $mdSpacing;
+                padding-bottom: $mdSpacing;
+                width: 50%;
+                color: $white;
+            }
+            @include images('mobile');
+        }
+    }
+}
+
+.footer{
+    margin-top: $lgSpacing;
+    padding: $xlSpacing 0;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav{
+        margin: $mdSpacing 0;
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: $baseSpacing;
+        }
+    }
+
+    .social{
+       width: 100%;
+        ul {
+            margin: 0 auto;
+            width: 140px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

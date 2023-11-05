@@ -1,0 +1,15 @@
+$images: 'deep-earth' , 'night-arcade', 'soccer-team', 'grid', 'from-above', 'pocket-borealis', 'curiosity', 'fisheye';
+
+@mixin images($screenType) {
+    @for $cifra from 1 through length($images) {
+        &:nth-child(#{$cifra}) {
+            $image: nth($images, $cifra);
+            background-image: url('../images/#{$screenType}/image-#{$image}.jpg');
+
+            &:hover {
+                cursor: pointer;
+                background-image: linear-gradient(rgba(104, 99, 99, 0.65), rgba(84, 81, 81, 0.2)), url('../images/#{$screenType}/image-#{$image}.jpg');
+            }
+        }
+    }
+}

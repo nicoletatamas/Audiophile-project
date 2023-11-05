@@ -1,0 +1,91 @@
+@import 'colors';
+@import 'base';
+@import 'spacings';
+@import 'typography';
+
+
+@media screen and (max-width: 376px) {
+    .container {
+        padding: 0 $mdSpacing;
+    }
+    .hero {
+        background-image: url('home/mobile/image-header.jpg');
+        header {
+            width: 300px;
+        }
+        .textHeader {
+            margin: 0;
+            text-align: center;
+            width: 328px;
+            h2 {
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+           
+        }
+    }
+    .products {
+        .container {
+            flex-direction: column;
+            gap: $xxlSpacing;
+            div {
+                width: 320px;
+                img[alt~="headphones"] {
+                    left: 20%;
+                }
+            }
+        }
+    }
+    .interactive {
+       .zx7speaker {
+        background-image: url(home/mobile/image-speaker-zx7.jpg);
+       }
+       .yx1earphones {
+        flex-direction: column;
+        gap: $baseSpacing;
+        .imageEarphoes {
+            background-image: url('home/mobile/image-earphones-yx1.jpg');
+            width: auto;
+            height: 200px;
+        }
+        .text {
+            width: auto;
+            height: 200px;
+        }
+       } 
+    }
+    .sectionFooter {
+        footer {
+            justify-content: center;
+            align-items: center;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            nav {
+                align-items: center;
+                justify-content: center;
+                ul {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    li {
+                        margin-bottom: $baseSpacing;
+                    }
+                }
+            }
+            h5, p {
+                grid-column: 1 / 3;
+                text-align: center;
+            }
+            .icons {
+                grid-column: 1 / 3;
+                grid-row: 5 / 6;
+                padding-right: 40%;
+            }
+        }
+    }    
+}

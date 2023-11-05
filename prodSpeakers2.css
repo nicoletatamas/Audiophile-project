@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 120px;
+}
+
+button {
+  width: 160px;
+  height: 48px;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  color: #FFFFFF;
+  font-weight: 700px;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 30px;
+  font-style: normal;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+nav ul li a:hover {
+  cursor: pointer;
+  color: #D87D4A;
+}
+
+.hero {
+  padding-top: 45px;
+  color: #FFFFFF;
+}
+.hero header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero header button {
+  display: none;
+}
+.hero header img[alt~=logo] {
+  width: 143px;
+  height: 25px;
+}
+
+.bestAudio {
+  margin-top: 120px;
+}
+.bestAudio .container {
+  display: flex;
+}
+.bestAudio .text {
+  padding-top: 50px;
+  padding-right: 90px;
+  width: 540px;
+  height: auto;
+}
+.bestAudio .text h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 2px;
+}
+.bestAudio .text h1 span {
+  color: #D87D4A;
+}
+.bestAudio .text p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.bestAudio .image {
+  background-image: url("shared/desktop/image-best-gear.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  width: 540px;
+  height: 500px;
+}
+
+.sectionFooter {
+  background-color: #101010;
+  margin-top: 120px;
+}
+.sectionFooter .container {
+  padding-top: 60px;
+}
+.sectionFooter .container footer {
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.sectionFooter .container footer nav {
+  display: flex;
+  align-items: end;
+}
+.sectionFooter .container footer p, .sectionFooter .container footer h5 {
+  font-size: 1em;
+  opacity: 50%;
+  line-height: 25px;
+}
+.sectionFooter .container footer .icons {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 15px;
+}
+.sectionFooter .container footer .icons img:hover {
+  filter: drop-shadow(#D87D4A);
+}
+
+.products {
+  margin-top: 180px;
+}
+.products .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.products .container div {
+  background-color: #F1F1F1;
+  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.products .container div img[alt~=headphones] {
+  width: 190px;
+  height: 180px;
+  position: absolute;
+  bottom: 45%;
+  left: 20%;
+}
+.products .container div h3 {
+  font-size: 2em;
+  margin-top: 120px;
+  text-align: center;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+.products .container div a {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 8px;
+  margin-top: 15px;
+  margin-left: 43%;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.products .container div a img[alt~=arrow] {
+  width: 8px;
+  height: 11px;
+}
+.products .container div a:hover {
+  cursor: pointer;
+  color: #D87D4A;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+  .hero header button {
+    display: contents;
+  }
+  .hero header nav {
+    display: none;
+  }
+  .hero .textHeader {
+    text-align: center;
+    margin: 0 10%;
+  }
+  .bestAudio .container {
+    flex-direction: column-reverse;
+  }
+  .bestAudio .image {
+    background-image: url("shared/tablet/image-best-gear.jpg");
+    width: auto;
+    height: 300px;
+  }
+  .bestAudio .text {
+    padding: 5% 10%;
+    width: auto;
+    text-align: center;
+  }
+  .sectionFooter footer a {
+    grid-column: 1/3;
+  }
+  .sectionFooter footer nav {
+    grid-column: 1/3;
+    align-items: start;
+  }
+  .sectionFooter footer nav li {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  .sectionFooter footer p {
+    grid-column: 1/3;
+  }
+  .sectionFooter footer h5 {
+    grid-column: 1/2;
+  }
+  .sectionFooter footer .icons {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    padding-bottom: 10%;
+  }
+  .products .container {
+    gap: 15px;
+  }
+  .products .container div img[alt~=headphones] {
+    left: 5%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .container {
+    padding: 0 30px;
+  }
+  .hero header {
+    width: 300px;
+  }
+  .hero .textHeader {
+    margin: 0;
+    text-align: center;
+    width: 328px;
+  }
+  .hero .textHeader h2 {
+    font-size: 1rem;
+  }
+  .hero .textHeader h1 {
+    font-size: 3rem;
+  }
+  .sectionFooter footer {
+    justify-content: center;
+    align-items: center;
+  }
+  .sectionFooter footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionFooter footer nav {
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionFooter footer nav ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .sectionFooter footer nav ul li {
+    margin-bottom: 15px;
+  }
+  .sectionFooter footer h5, .sectionFooter footer p {
+    grid-column: 1/3;
+    text-align: center;
+  }
+  .sectionFooter footer .icons {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    padding-right: 40%;
+  }
+  .products .container {
+    flex-direction: column;
+    gap: 120px;
+  }
+  .products .container div {
+    width: 320px;
+  }
+  .products .container div img[alt~=headphones] {
+    left: 20%;
+  }
+}
+html {
+  font-size: 13px;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p, li, a, button {
+  font-size: 1rem;
+}
+
+.hero {
+  background-color: #000000;
+  position: relative;
+  height: 100px;
+  padding-top: 45px;
+  color: #FFFFFF;
+}
+.hero h1 {
+  text-align: center;
+  padding-top: 45px;
+  padding-left: 45px;
+}
+
+.sectionProducts {
+  margin-top: 45px;
+}
+.sectionProducts .back {
+  text-decoration: none;
+  color: #000000;
+  opacity: 50%;
+}
+.sectionProducts .headphones-1 {
+  display: flex;
+  margin-top: 60px;
+}
+.sectionProducts .headphones-1 .image {
+  width: 500px;
+  height: 500px;
+  background-image: url("product-zx7-speaker/desktop/image-product.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+.sectionProducts .headphones-1 .description {
+  width: 500px;
+  height: 500px;
+  padding-left: 120px;
+  padding-top: 60px;
+}
+.sectionProducts .headphones-1 .description h5 {
+  font-size: 1rem;
+  letter-spacing: 6px;
+  color: #D87D4A;
+  font-weight: 100;
+}
+.sectionProducts .headphones-1 .description h1 {
+  font-size: 3em;
+  margin: 20px 0;
+}
+.sectionProducts .headphones-1 .description p {
+  font-size: 1rem;
+  opacity: 50%;
+  line-height: 25px;
+}
+.sectionProducts .headphones-1 .description .plusOrMinus {
+  margin-bottom: 30px;
+  display: flex;
+  width: 160px;
+  height: 40px;
+}
+.sectionProducts .headphones-1 .description .plusOrMinus input {
+  border: none;
+  text-align: center;
+  width: 50px;
+  background-color: #F1F1F1;
+}
+.sectionProducts .headphones-1 .description .plusOrMinus button {
+  background-color: #F1F1F1;
+  color: #000000;
+  width: 50px;
+  height: 40px;
+}
+.sectionProducts .headphones-1 .description button {
+  background-color: #D87D4A;
+  color: #FFFFFF;
+}
+.sectionProducts .headphones-1 .description button:hover {
+  background-color: #FBAF85;
+}
+
+.descriptionProduct {
+  display: flex;
+  margin-top: 120px;
+}
+.descriptionProduct .text1 {
+  width: 700px;
+  padding-right: 120px;
+}
+.descriptionProduct .text1 p {
+  opacity: 50%;
+  line-height: 25px;
+}
+.descriptionProduct .text2 ul li {
+  list-style: none;
+  margin-bottom: 15px;
+  opacity: 50%;
+}
+.descriptionProduct .text2 ul li span {
+  color: #D87D4A;
+  margin-right: 20px;
+}
+
+.sectionProducts .imagesProduct {
+  margin-top: 120px;
+  display: flex;
+  gap: 15px;
+}
+.sectionProducts .imagesProduct .boxImages {
+  width: 445px;
+  height: 600px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+.sectionProducts .imagesProduct .boxImages .image1 {
+  width: 445px;
+  height: 280px;
+  background-image: url("product-zx7-speaker/desktop/image-gallery-1.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+.sectionProducts .imagesProduct .boxImages .image2 {
+  width: 445px;
+  height: 280px;
+  background-image: url("product-zx7-speaker/desktop/image-gallery-2.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+.sectionProducts .imagesProduct .image3 {
+  width: 635px;
+  height: 600px;
+  background-image: url("product-zx7-speaker/desktop/image-gallery-3.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.otherProducts {
+  margin-top: 120px;
+}
+.otherProducts h2 {
+  text-align: center;
+}
+.otherProducts .boxes {
+  display: flex;
+}
+.otherProducts .boxes .product {
+  width: 350px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.otherProducts .boxes .product .image1 {
+  background-image: url("shared/desktop/image-xx99-mark-one-headphones.jpg");
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+.otherProducts .boxes .product .image2 {
+  background-image: url("shared/desktop/image-xx59-headphones.jpg");
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+.otherProducts .boxes .product .image3 {
+  background-image: url("shared/desktop/image-zx9-speaker.jpg");
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+.otherProducts .boxes .product button {
+  background-color: #D87D4A;
+  color: #FFFFFF;
+}
+.otherProducts .boxes .product button:hover {
+  background-color: #FBAF85;
+}/*# sourceMappingURL=prodSpeakers2.css.map */

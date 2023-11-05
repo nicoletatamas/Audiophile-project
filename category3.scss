@@ -1,0 +1,72 @@
+@import 'colors';
+@import 'base';
+@import 'spacings';
+@import 'typography';
+
+
+.hero {
+    background-color: $black;
+    position: relative;
+    height: 300px;
+    padding-top: $lgSpacing;
+    color: $White;
+
+    h1 {
+        text-align: center;
+        padding-top: $lgSpacing;
+        padding-left: $lgSpacing;
+    }
+
+}
+
+.sectionProducts {
+
+    .earphones {
+        display: flex;
+        margin-top: $xxlSpacing;
+
+        .image {
+            width: 500px;
+            height: 500px;
+            background-image: url('product-yx1-earphones/desktop/image-category-page-preview.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .description {
+            width: 500px;
+            height: 500px;
+            padding-left: $xxlSpacing;
+            padding-top: $xlSpacing;
+
+            h5 {
+                font-size: 1rem;
+                letter-spacing: 6px;
+                color: $orange;
+                font-weight: 100;
+            }
+
+            h1 {
+                font-size: 3em;
+                margin: 20px 0;
+            }
+
+            p {
+
+                font-size: 1rem;
+                opacity: 50%;
+                line-height: 25px;
+            }
+
+            button {
+                background-color: $orange;
+                color: $White;
+
+                &:hover {
+                    background-color: $orangeLight;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 120px;
+}
+
+button {
+  width: 160px;
+  height: 48px;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  color: #FFFFFF;
+  font-weight: 700px;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 30px;
+  font-style: normal;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+nav ul li a:hover {
+  cursor: pointer;
+  color: #D87D4A;
+}
+
+.hero {
+  padding-top: 45px;
+  color: #FFFFFF;
+}
+.hero header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero header button {
+  display: none;
+}
+.hero header img[alt~=logo] {
+  width: 143px;
+  height: 25px;
+}
+
+.bestAudio {
+  margin-top: 120px;
+}
+.bestAudio .container {
+  display: flex;
+}
+.bestAudio .text {
+  padding-top: 50px;
+  padding-right: 90px;
+  width: 540px;
+  height: auto;
+}
+.bestAudio .text h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 2px;
+}
+.bestAudio .text h1 span {
+  color: #D87D4A;
+}
+.bestAudio .text p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.bestAudio .image {
+  background-image: url("shared/desktop/image-best-gear.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  width: 540px;
+  height: 500px;
+}
+
+.sectionFooter {
+  background-color: #101010;
+  margin-top: 120px;
+}
+.sectionFooter .container {
+  padding-top: 60px;
+}
+.sectionFooter .container footer {
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.sectionFooter .container footer nav {
+  display: flex;
+  align-items: end;
+}
+.sectionFooter .container footer p, .sectionFooter .container footer h5 {
+  font-size: 1em;
+  opacity: 50%;
+  line-height: 25px;
+}
+.sectionFooter .container footer .icons {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 15px;
+}
+.sectionFooter .container footer .icons img:hover {
+  filter: drop-shadow(#D87D4A);
+}
+
+.products {
+  margin-top: 180px;
+}
+.products .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.products .container div {
+  background-color: #F1F1F1;
+  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.products .container div img[alt~=headphones] {
+  width: 190px;
+  height: 180px;
+  position: absolute;
+  bottom: 45%;
+  left: 20%;
+}
+.products .container div h3 {
+  font-size: 2em;
+  margin-top: 120px;
+  text-align: center;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+.products .container div a {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 8px;
+  margin-top: 15px;
+  margin-left: 43%;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.products .container div a img[alt~=arrow] {
+  width: 8px;
+  height: 11px;
+}
+.products .container div a:hover {
+  cursor: pointer;
+  color: #D87D4A;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+  .hero header button {
+    display: contents;
+  }
+  .hero header nav {
+    display: none;
+  }
+  .hero .textHeader {
+    text-align: center;
+    margin: 0 10%;
+  }
+  .bestAudio .container {
+    flex-direction: column-reverse;
+  }
+  .bestAudio .image {
+    background-image: url("shared/tablet/image-best-gear.jpg");
+    width: auto;
+    height: 300px;
+  }
+  .bestAudio .text {
+    padding: 5% 10%;
+    width: auto;
+    text-align: center;
+  }
+  .sectionFooter footer a {
+    grid-column: 1/3;
+  }
+  .sectionFooter footer nav {
+    grid-column: 1/3;
+    align-items: start;
+  }
+  .sectionFooter footer nav li {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  .sectionFooter footer p {
+    grid-column: 1/3;
+  }
+  .sectionFooter footer h5 {
+    grid-column: 1/2;
+  }
+  .sectionFooter footer .icons {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    padding-bottom: 10%;
+  }
+  .products .container {
+    gap: 15px;
+  }
+  .products .container div img[alt~=headphones] {
+    left: 5%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .container {
+    padding: 0 30px;
+  }
+  .hero header {
+    width: 300px;
+  }
+  .hero .textHeader {
+    margin: 0;
+    text-align: center;
+    width: 328px;
+  }
+  .hero .textHeader h2 {
+    font-size: 1rem;
+  }
+  .hero .textHeader h1 {
+    font-size: 3rem;
+  }
+  .sectionFooter footer {
+    justify-content: center;
+    align-items: center;
+  }
+  .sectionFooter footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionFooter footer nav {
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionFooter footer nav ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .sectionFooter footer nav ul li {
+    margin-bottom: 15px;
+  }
+  .sectionFooter footer h5, .sectionFooter footer p {
+    grid-column: 1/3;
+    text-align: center;
+  }
+  .sectionFooter footer .icons {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    padding-right: 40%;
+  }
+  .products .container {
+    flex-direction: column;
+    gap: 120px;
+  }
+  .products .container div {
+    width: 320px;
+  }
+  .products .container div img[alt~=headphones] {
+    left: 20%;
+  }
+}
+html {
+  font-size: 13px;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p, li, a, button {
+  font-size: 1rem;
+}
+
+.hero {
+  background-image: url("home/desktop/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 729px;
+  padding-top: 45px;
+  color: #FFFFFF;
+}
+.hero header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero header button {
+  display: none;
+}
+.hero header img[alt~=logo] {
+  width: 143px;
+  height: 25px;
+}
+.hero .lineWhite {
+  background-color: white;
+  margin-top: 30px;
+  height: 0.5px;
+  opacity: 10.4%;
+}
+.hero .textHeader {
+  position: absolute;
+  width: 398px;
+  height: 346px;
+  top: 200px;
+}
+.hero .textHeader h2 {
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 19px;
+  letter-spacing: 10px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.hero .textHeader h1 {
+  font-weight: 700;
+  font-size: 4em;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+.hero .textHeader h5 {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+.hero .textHeader button {
+  width: 160px;
+  height: 48px;
+  background-color: #D87D4A;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  top: 15px;
+}
+.hero .textHeader button:hover {
+  cursor: pointer;
+  background-color: #FBAF85;
+}
+
+.products {
+  margin-top: 180px;
+}
+.products .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.products .container div {
+  background-color: #F1F1F1;
+  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.products .container div img[alt~=headphones] {
+  width: 190px;
+  height: 180px;
+  position: absolute;
+  bottom: 45%;
+  left: 20%;
+}
+.products .container div h3 {
+  font-size: 2em;
+  margin-top: 120px;
+  text-align: center;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+.products .container div a {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 8px;
+  margin-top: 15px;
+  margin-left: 43%;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.products .container div a img[alt~=arrow] {
+  width: 8px;
+  height: 11px;
+}
+.products .container div a:hover {
+  cursor: pointer;
+  color: #D87D4A;
+}
+
+.interactive {
+  margin-top: 180px;
+}
+.interactive .container .premiumSpeaker {
+  height: 560px;
+  display: flex;
+  gap: 150px;
+  background-color: #D87D4A;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.interactive .container .premiumSpeaker img {
+  margin-top: 8%;
+  margin-left: 10%;
+  width: 400px;
+  height: 490px;
+}
+.interactive .container .premiumSpeaker .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #FFFFFF;
+}
+.interactive .container .premiumSpeaker .text h1 {
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 2px;
+}
+.interactive .container .premiumSpeaker .text p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  padding-right: 150px;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  margin: 0;
+}
+.interactive .container .premiumSpeaker .text button {
+  width: 160px;
+  height: 48px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  border: none;
+}
+.interactive .container .premiumSpeaker .text button:hover {
+  cursor: pointer;
+  background-color: #4C4C4C;
+}
+
+.zx7speaker {
+  margin-top: 30px;
+  background-image: url("home/desktop/image-speaker-zx7.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 320px;
+  position: relative;
+  border-radius: 8px;
+}
+.zx7speaker h1 {
+  font-size: 2rem;
+  position: absolute;
+  top: 20%;
+  left: 7%;
+}
+.zx7speaker button {
+  background-color: transparent;
+  border: 1px solid #000000;
+  position: absolute;
+  top: 55%;
+  left: 7%;
+}
+.zx7speaker button:hover {
+  cursor: pointer;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.yx1earphones {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+}
+.yx1earphones .imageEarphoes {
+  background-image: url("home/desktop/image-earphones-yx1.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  width: 100%;
+  height: 320px;
+}
+.yx1earphones .text {
+  background-color: #F1F1F1;
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+  position: relative;
+}
+.yx1earphones .text h1 {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  font-size: 2em;
+}
+.yx1earphones .text button {
+  background-color: transparent;
+  border: 1px solid #000000;
+  position: absolute;
+  top: 55%;
+  left: 15%;
+}
+.yx1earphones .text button:hover {
+  cursor: pointer;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.bestAudio {
+  margin-top: 120px;
+}
+.bestAudio .container {
+  display: flex;
+}
+.bestAudio .text {
+  padding-top: 50px;
+  padding-right: 90px;
+  width: 540px;
+  height: auto;
+}
+.bestAudio .text h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 2px;
+}
+.bestAudio .text h1 span {
+  color: #D87D4A;
+}
+.bestAudio .text p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.bestAudio .image {
+  background-image: url("shared/desktop/image-best-gear.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  width: 540px;
+  height: 500px;
+}
+
+.sectionFooter {
+  background-color: #101010;
+  margin-top: 120px;
+}
+.sectionFooter .container {
+  padding-top: 60px;
+}
+.sectionFooter .container footer {
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.sectionFooter .container footer nav {
+  display: flex;
+  align-items: end;
+}
+.sectionFooter .container footer p, .sectionFooter .container footer h5 {
+  font-size: 1em;
+  opacity: 50%;
+  line-height: 25px;
+}
+.sectionFooter .container footer .icons {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 15px;
+}
+.sectionFooter .container footer .icons img:hover {
+  filter: drop-shadow(.sectionFooter .container footer .icons img:hover #D87D4A);
+}/*# sourceMappingURL=style.css.map */

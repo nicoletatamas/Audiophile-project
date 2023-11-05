@@ -1,0 +1,57 @@
+@import 'colors';
+@import 'base';
+@import 'spacings';
+@import 'typography';
+
+body {
+    background-color: $blackDark;
+}
+
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: $mdSpacing;
+    
+    .loginForm {
+        width: 400px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $baseSpacing;
+        background-color: $greyDark;
+        color: $White;
+        border-radius: 8px;
+        
+        input {
+            background-color: transparent;
+            opacity: 0.8;
+            border-radius: 8px;
+            width: 230px;
+            height: 40px;
+        }
+        .checkboxButton {
+            width: 230px;
+            display: flex;
+            justify-content: flex-start;
+            #checkbox {
+                width: auto;
+                height: auto;
+            }
+        }
+        button {
+            background-color: $orange;
+            border-radius: 8px;
+            color: $White;
+            font-size: 1rem;
+        }
+        a {
+            color: $orangeLight;
+        }
+        
+    }
+
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="login.css" rel="stylesheet" />
+    <script type="module" src="login.js"></script>
+</head>
+
+<body>
+    <div class="loginPage">
+        <form class="loginForm">
+            <h1>Welcome</h1>
+            <div>
+                <label for="userName">User Name</label><br>
+                <input type="text" name="userName" id="userName" required />
+            </div>
+            <div>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" />
+            </div>
+            <div class="checkboxButton">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <label>Remember me</label>
+            </div>
+            <button id="submitButton">Login</button>
+            <a href="#">Forgot your password</a>
+            <h4>New here? <a href="signUp.html">Sign up</a></h4>
+        </form>
+
+    </div>
+</body>
+
+</html>

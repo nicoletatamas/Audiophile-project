@@ -1,0 +1,229 @@
+@import 'colors';
+@import 'base';
+@import 'spacings';
+@import 'typography';
+
+
+.hero {
+    background-color: $black;
+    position: relative;
+    height: 100px;
+    padding-top: $lgSpacing;
+    color: $White;
+
+    h1 {
+        text-align: center;
+        padding-top: $lgSpacing;
+        padding-left: $lgSpacing;
+    }
+
+}
+
+.sectionProducts {
+    margin-top: $lgSpacing;
+
+    .back {
+        text-decoration: none;
+        color: $black;
+        opacity: 50%;
+    }
+
+    .headphones-1 {
+        display: flex;
+        margin-top: $xlSpacing;
+
+        .image {
+            width: 500px;
+            height: 500px;
+            background-image: url('product-xx59-headphones/desktop/image-product.jpg');
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px;
+        }
+
+        .description {
+            width: 500px;
+            height: 500px;
+            padding-left: $xxlSpacing;
+            padding-top: $xlSpacing;
+
+            h5 {
+                font-size: 1rem;
+                letter-spacing: 6px;
+                color: $orange;
+                font-weight: 100;
+            }
+
+            h1 {
+                font-size: 3em;
+                margin: 20px 0;
+            }
+
+            p {
+
+                font-size: 1rem;
+                opacity: 50%;
+                line-height: 25px;
+            }
+
+            .plusOrMinus {
+                margin-bottom: 30px;
+                display: flex;
+                width: 160px;
+                height: 40px;
+
+                input {
+                    border: none;
+                    text-align: center;
+                    width: 50px;
+                    background-color: $grey;
+
+                }
+
+                button {
+                    background-color: $grey;
+                    color: $black;
+                    width: 50px;
+                    height: 40px;
+                }
+            }
+
+            button {
+
+                background-color: $orange;
+                color: $White;
+
+                &:hover {
+                    background-color: $orangeLight;
+                }
+            }
+        }
+    }
+
+}
+
+.descriptionProduct {
+    display: flex;
+    margin-top: $xxlSpacing;
+
+    .text1 {
+        width: 700px;
+        padding-right: $xxlSpacing;
+
+        p {
+            opacity: 50%;
+            line-height: 25px;
+        }
+    }
+
+    .text2 {
+        ul {
+            li {
+                list-style: none;
+                margin-bottom: 15px;
+                opacity: 50%;
+
+                span {
+                    color: $orange;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+.sectionProducts {
+    .imagesProduct {
+        margin-top: $xxlSpacing;
+        display: flex;
+        gap: $baseSpacing;
+
+        .boxImages {
+            width: 445px;
+            height: 600px;
+            display: flex;
+            gap: 40px;
+            flex-direction: column;
+
+            .image1 {
+                width: 445px;
+                height: 280px;
+                background-image: url("product-xx59-headphones/desktop/image-gallery-1.jpg");
+                background-position: center;
+                background-size: cover;
+                border-radius: 8px;
+            }
+
+            .image2 {
+                width: 445px;
+                height: 280px;
+                background-image: url("product-xx59-headphones/desktop/image-gallery-2.jpg");
+                background-position: center;
+                background-size: cover;
+                border-radius: 8px;
+            }
+        }
+
+        .image3 {
+            width: 635px;
+            height: 600px;
+            background-image: url('product-xx59-headphones/desktop/image-gallery-3.jpg');
+            background-position: center;
+            background-size: cover;
+            border-radius: 8px;
+        }
+    }
+}
+
+.otherProducts {
+    margin-top: $xxlSpacing;
+
+    h2 {
+        text-align: center;
+    }
+
+    .boxes {
+        display: flex;
+
+        .product {
+            width: 350px;
+            height: 470px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .image1 {
+                background-image: url('shared/desktop/image-xx99-mark-one-headphones.jpg');
+                width: 300px;
+                height: 300px;
+                background-position: center;
+                background-size: cover;
+                border-radius: 8px;
+            }
+            .image2 {
+                background-image: url('shared/desktop/image-xx59-headphones.jpg');
+                width: 300px;
+                height: 300px;
+                background-position: center;
+                background-size: cover;
+                border-radius: 8px;
+            }
+            .image3 {
+                background-image: url('shared/desktop/image-zx9-speaker.jpg');
+                width: 300px;
+                height: 300px;
+                background-position: center;
+                background-size: cover;
+                border-radius: 8px;
+            }
+            button {
+                background-color: $orange;
+                color: $White;
+                &:hover {
+                    background-color: $orangeLight;
+                }
+            }
+        }
+    }
+}

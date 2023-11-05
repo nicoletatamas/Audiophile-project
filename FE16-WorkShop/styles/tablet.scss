@@ -1,0 +1,119 @@
+@import 'base';
+@import 'colors';
+@import 'spacings';
+@import 'typography';
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 936px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .hero {
+        height: 650px;
+
+        nav {
+            display: block;
+
+            ul {
+                color: $white;
+                display: flex;
+                gap: $mdSpacing;
+                list-style: none;
+            }
+        }
+
+        h1 {
+            width: 50%;
+
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    .interactive {
+        .container {
+            position: relative;
+        }
+
+        img {
+            margin: 0;
+        }
+
+        .text {
+            width: 50%;
+            padding: $mdSpacing;
+            background-color: $white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+    }
+
+    .our-creations {
+
+        margin-top: $xxlSpacing;
+
+        .container {
+            position: relative;
+            display: block;
+        }
+
+        .creations {
+            margin-top: $xlSpacing;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        button {
+            width: 180px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .footer {
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            a {
+                order: 1;
+            }
+
+            nav {
+                order: 3;
+
+                ul {
+                    flex-direction: row;
+                }
+            }
+
+            .social {
+                order: 2;
+
+                ul {
+                    width: 100%;
+                    justify-content: flex-end;
+                    gap: $baseSpacing;
+                }
+
+            }
+
+            p {
+                order: 4;
+                text-align: right;
+            }
+        }
+    }
+}
